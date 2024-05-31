@@ -1,0 +1,38 @@
+import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performTextInput
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.rule.ActivityTestRule
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+
+@RunWith(AndroidJUnit4::class)
+class LoginActivityTest {
+
+    @get:Rule
+    val activityRule = ActivityTestRule(LoginActivity::class.java)
+
+    @get:Rule
+    val composeTestRule = createComposeRule()
+
+    @Test
+    fun login_withValidCredentials_navigatesToCatBreedsScreen() {
+        // Arrange
+        val username = "user1"
+        val password = "password"
+
+        // Act
+        composeTestRule.setContent {
+            LoginScreen() 
+        }
+
+        composeTestRule.onNodeWithText("Username").performTextInput(username)
+        composeTestRule.onNodeWithText("Password").performTextInput(password)
+        composeTestRule.onNodeWithText("Login").performClick()
+
+        // Assert
+        composeTestRule.onNodeWithText("Cats Breeds").assertExists()
+    }
+}
