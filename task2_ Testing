@@ -40,4 +40,26 @@ There is special error message for the case with not entered username and passwo
 Actual result:
 The messages for the empty and invalid data entered are the same 
 
+***  
+
+BUG-4. No retry link/button on Failed to load screen 
+
+Preconditions:
+No internet connection 
+
+Steps to reproduce: 
+1) Try to to the app with valid credentials 
+2) Pay attention the Failed to load screen 
+
+Expected result:
+There is possibility to reload login screen 
+
+Actual result:
+There is no link/button to reload the Failed to load screen 
+
+***
+
+
+
+
 
