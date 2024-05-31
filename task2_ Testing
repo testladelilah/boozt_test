@@ -1,0 +1,43 @@
+Test results:
+
+BUG-1. The wrong cat breed is shown by tapping the cards 
+
+Steps to reproduce: 
+1) Login to the app with valid credentials 
+2) On the List of Breeds screen tap any cat card except for Abyssin 
+
+Expected result:
+The breed card corresponds to what was shown on the List of breeds screen
+
+Actual result:
+For all cat breeds the Abyssin cat card is shown 
+
+***
+
+BUG-2. A focused cat card isn't highlighted 
+
+Steps to reproduce: 
+1) Login to the app with valid credentials 
+2) On the List of Breeds screen scroll through the breeds and pay attention if/how cards are highlighted
+
+Expected result:
+The card that is in the focus is highlighted (brighter)
+
+Actual result:
+The card that is in the focus is not highlighted (it becomes blurred for a second as a flash and then looks like the others)
+
+***
+
+BUG-3. Error messages for the case with invalid and empty username/password should be different 
+
+Steps to reproduce: 
+1) Try to login with missing username and password
+2) Check error messages 
+
+Expected result: 
+There is special error message for the case with not entered username and password 
+
+Actual result:
+The messages for the empty and invalid data entered are the same 
+
+
