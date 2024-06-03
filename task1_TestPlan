@@ -4,7 +4,7 @@ Test plan for login feature
 1) Functional testing (login, logout, positive and negative)
 2) Integration testing (with registration and profile) 
 3) Stress and Load testing 
-4) Connection and interuption testing
+4) Connection and interruption testing
 5) Security (access)
 6) Compatibility testing
 7) Compliance testing 
